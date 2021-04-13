@@ -1,0 +1,25 @@
+/* ========
+  mixin
+===========*/
+
+@mixin productContent {
+  width: 90%;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  border-radius: $radius;
+  overflow: hidden;
+  padding: 15px;
+  min-height: 150px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@mixin productNew {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 12px;
+  color: red;
+  text-transform: capitalize;
+}

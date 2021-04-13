@@ -7,9 +7,7 @@ const Product = () => {
     <section className="section-Products">
       <div className="section-Products__container">
         {data.map((item) => (
-          <div className="product" key={item.id}>
-            <Products {...item} />
-          </div>
+          <Products key={item.id} {...item} />
         ))}
       </div>
     </section>

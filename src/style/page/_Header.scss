@@ -1,0 +1,60 @@
+/* =======
+  Header
+  ======= */
+
+.header-section {
+  padding: 25px 0;
+  background-color: $color-heder_bg;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.103);
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 4rem;
+
+  .header-section__center {
+    display: flex;
+    width: $small-screen-width;
+    justify-content: space-between;
+    margin: auto;
+    a {
+      color: #000;
+    }
+    .header-section__center__title {
+      font-family: $font-title;
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: bold;
+      letter-spacing: $spacing;
+      line-height: 24px;
+    }
+    .header-section__shop__links {
+      display: flex;
+
+      a {
+        margin-right: 30px;
+        color: #000;
+        position: relative;
+      }
+      svg {
+        line-height: 30px;
+        display: block;
+      }
+      .number {
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        background-color: #1607e6;
+        font-size: 12px;
+        font-weight: 500;
+        color: #ffffff;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 5px;
+        position: absolute;
+        left: 19px;
+        bottom: 8px;
+        line-height: 20px;
+      }
+    }
+  }
+}

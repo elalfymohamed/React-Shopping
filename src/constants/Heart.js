@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "../Header";
+import Header from "../components/Header";
+import ProductHeart from "./ProductHeart";
 
 function Heart() {
   return (
@@ -11,6 +12,12 @@ function Heart() {
             <p>your heart is empty</p>
           </div>
         </div>
+        {/* <div className="section-heart__product">
+          <div className="section-heart__product__content">
+            <ProductHeart />
+            
+          </div>
+        </div> */}
       </section>
     </>
   );
