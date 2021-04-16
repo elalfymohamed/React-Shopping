@@ -23,3 +23,42 @@
   color: red;
   text-transform: capitalize;
 }
+
+@mixin section-cart__container {
+  min-height: calc(100% - 65px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+}
+
+@mixin section-cart__container-p {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #575757c4;
+  line-height: 24px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: $spacing;
+}
+
+@mixin section__shopping {
+  display: flex;
+  margin-bottom: 15px;
+
+  .title {
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    line-height: 25px;
+    text-transform: capitalize;
+  }
+  p {
+    font-size: 14px;
+    line-height: 28px;
+    color: rgb(126, 133, 155);
+    margin-left: 5px;
+  }
+}

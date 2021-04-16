@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import FeatherIcon from "feather-icons-react";
+import {
+  addToCart,
+  loadCurrentItem,
+  addToHeart,
+  updateHeartData,
+  updateCartData,
+} from "../../redux/actions/actions";
 
 const Products = ({
+  id,
   section,
   product_name,
   new_product,
@@ -12,14 +21,24 @@ const Products = ({
   start,
   offer,
   sale,
+  core,
+  addToCart,
+  addToHeart,
+  loadCurrentItem,
+  productsData,
+  updateHeartData,
+  updateCartData,
 }) => {
-  const [addHeart, setAddHeart] = useState(false);
   return (
     <div className="product">
       <div className="product-content">
         <div className="product__image">
           {new_product && <span className="new label">{new_product}</span>}
-          <Link to="/product_detailing" className="img">
+          <Link
+            to={`/product/detailing/${id}`}
+            className="img"
+            onClick={() => loadCurrentItem(productsData)}
+          >
             <img src={img} alt={img} height="320" width="270" />
           </Link>
         </div>
@@ -27,10 +46,10 @@ const Products = ({
           <Link
             to="/"
             data-tooltip="Wishlist"
-            onClick={() => setAddHeart(!addHeart)}
+            onClick={() => addToHeart(id) && updateHeartData(id)}
           >
             <svg
-              className={addHeart ? "heart anim" : "heart"}
+              className={core ? "heart anim" : "heart"}
               width="29"
               height="29"
               viewBox="467 392 58 57"
@@ -44,7 +63,11 @@ const Products = ({
               </g>
             </svg>
           </Link>
-          <Link to="/" data-tooltip="shopping-cart">
+          <Link
+            to="/"
+            data-tooltip="shopping-cart"
+            onClick={() => addToCart(id) && updateCartData(id)}
+          >
             <FeatherIcon icon={"shopping-cart"} />
           </Link>
         </div>
@@ -60,11 +83,11 @@ const Products = ({
           <div className="price__ratting">
             {sale && (
               <div className="price__offer">
-                <span className="oldPrice">{offer}</span>
+                <span className="oldPrice">${offer}</span>
               </div>
             )}
             <div className="price">
-              <h5 className={sale ? "old line" : "old"}>{price}</h5>
+              <h5 className={sale ? "old line" : "old"}>${price}</h5>
               {sale && <span className="value">{sale}</span>}
             </div>
           </div>
@@ -90,7 +113,24 @@ const Products = ({
   );
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+    addToHeart: (id) => dispatch(addToHeart(id)),
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+    updateHeartData: (id) => dispatch(updateHeartData(id)),
+    updateCartData: (id) => dispatch(updateCartData(id)),
+  };
+};
+
+const mapStateToProps = (state) => {
+  return {
+    productsData: state.shop.productsData,
+  };
+};
+
 Products.propTypes = {
+  id: PropTypes.string.isRequired,
   section: PropTypes.string,
   product_name: PropTypes.string,
   new_product: PropTypes.string,
@@ -99,6 +139,13 @@ Products.propTypes = {
   start: PropTypes.number,
   offer: PropTypes.string,
   sale: PropTypes.string,
+  core: PropTypes.bool,
+  addToCart: PropTypes.func,
+  loadCurrentItem: PropTypes.func,
+  productsData: PropTypes.array,
+  addToHeart: PropTypes.func,
+  updateHeartData: PropTypes.func,
+  updateCartData: PropTypes.func,
 };
 
-export default Products;
+export default connect(mapStateToProps, mapDispatchToProps)(Products);

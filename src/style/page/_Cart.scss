@@ -7,13 +7,7 @@
   margin: auto;
 
   .section-cart__container {
-    min-height: calc(100% - 65px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 15px;
+    @include section-cart__container;
 
     img {
       width: align;
@@ -21,15 +15,8 @@
       margin-bottom: 30px;
       display: block;
     }
-
     p {
-      font-size: 2rem;
-      text-transform: capitalize;
-      color: #575757c4;
-      line-height: 24px;
-      font-weight: bold;
-      font-style: normal;
-      letter-spacing: $spacing;
+      @include section-cart__container-p;
     }
   }
   //
@@ -42,22 +29,7 @@
       flex: 0 0 60%;
       margin: 0 auto;
       .section-cart__shopping {
-        display: flex;
-        margin-bottom: 15px;
-
-        .title {
-          font-size: 23px;
-          font-weight: bold;
-          color: rgb(51, 51, 51);
-          line-height: 25px;
-          text-transform: capitalize;
-        }
-        p {
-          font-size: 14px;
-          line-height: 28px;
-          color: rgb(126, 133, 155);
-          margin-left: 5px;
-        }
+        @include section__shopping;
       }
       .section-cart__product {
         @include productContent;
@@ -104,6 +76,9 @@
             &:hover {
               color: #c50a0a;
             }
+            svg {
+              padding: 2px;
+            }
           }
         }
         .product__cart__total__qty {
@@ -126,8 +101,8 @@
               width: 45px;
               height: 28px;
               font-size: 15px;
-
               padding-left: 5px;
+              border-radius: $radius;
             }
           }
         }
@@ -214,19 +189,15 @@
           cursor: pointer;
           transition: $transition;
 
+          color: #fff;
           span {
-            color: #fff;
             font-size: 1rem;
             text-transform: capitalize;
             font-weight: 400;
             letter-spacing: $spacing;
-            transition: $transition;
-
-            &:hover {
-              color: #000;
-            }
           }
           &:hover {
+            color: #000;
             background-color: #feee00;
           }
         }

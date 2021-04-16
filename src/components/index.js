@@ -4,7 +4,6 @@ import Product from "./views/Product";
 const Index = () => {
   return (
     <>
-      <Header />
       <Product />
     </>
   );

@@ -19,7 +19,7 @@ export default [
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
     new_product: "New",
-    price: "$45.00",
+    price: "45.00",
     img: Jackets,
     start: 4.5,
   },
@@ -29,10 +29,10 @@ export default [
     product_name: "T shirt",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$30.00",
+    price: "30.00",
     sale: "%20",
-    offer: "$23.99",
-    saved: "$6.00",
+    offer: "23.99",
+    saved: "6.00",
     img: T_shirt,
     start: 4,
   },
@@ -42,7 +42,7 @@ export default [
     product_name: "Jeans jackets",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$56.00",
+    price: "56.00",
     img: Jeans_jackets,
     start: 4.2,
   },
@@ -52,7 +52,7 @@ export default [
     product_name: "Shirt",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$12.99",
+    price: "12.99",
     img: Shirt,
     start: 5,
   },
@@ -62,10 +62,10 @@ export default [
     product_name: "Light shirt",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$50.00",
-    offer: "$30.99",
+    price: "50.00",
+    offer: "30.99",
     sale: "%20",
-    saved: "$19.00",
+    saved: "19.00",
     img: Light_shirt,
     start: 2.9,
   },
@@ -75,7 +75,7 @@ export default [
     product_name: "boxar",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$20.00",
+    price: "20.00",
     img: boxar,
     start: 3.7,
   },
@@ -86,7 +86,7 @@ export default [
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
     new_product: "New",
-    price: "$40.00",
+    price: "40.00",
     img: backpack,
     start: 4.4,
   },
@@ -96,7 +96,7 @@ export default [
     product_name: "T_shirt",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$30.99",
+    price: "30.99",
     img: TShirt,
     start: 4,
   },
@@ -106,7 +106,7 @@ export default [
     product_name: "michal",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$25.00",
+    price: "25.00",
     img: michal,
     start: 2.4,
   },
@@ -117,7 +117,7 @@ export default [
     new_product: "New",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$60.00",
+    price: "60.00",
     img: Shoes,
     start: 4,
   },
@@ -127,10 +127,10 @@ export default [
     product_name: "Short_blouse",
     custom_clothing:
       "Black crew neck t-shirt with short sleeves and short sleeves",
-    price: "$54.00",
+    price: "54.00",
     sale: "%50",
-    offer: "$27.99",
-    saved: "$26.00",
+    offer: "27.99",
+    saved: "26.00",
     img: Short_blouse,
     start: 3.5,
   },
