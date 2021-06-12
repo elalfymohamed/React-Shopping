@@ -28,6 +28,7 @@ const Products = ({
   productsData,
   updateHeartData,
   updateCartData,
+  index,
 }) => {
   return (
     <div className="product">
@@ -37,7 +38,7 @@ const Products = ({
           <Link
             to={`/product/detailing/${id}`}
             className="img"
-            onClick={() => loadCurrentItem(productsData)}
+            onClick={() => loadCurrentItem(productsData[index])}
           >
             <img src={img} alt={img} height="320" width="270" />
           </Link>
@@ -146,6 +147,7 @@ Products.propTypes = {
   addToHeart: PropTypes.func,
   updateHeartData: PropTypes.func,
   updateCartData: PropTypes.func,
+  index: PropTypes.number,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products);

@@ -9,7 +9,7 @@
   display: flex;
   border-radius: $radius;
   overflow: hidden;
-  padding: 15px;
+  padding-right: 15px;
   min-height: 150px;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -55,6 +55,7 @@
     line-height: 25px;
     text-transform: capitalize;
   }
+
   p {
     font-size: 14px;
     line-height: 28px;

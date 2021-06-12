@@ -45,34 +45,36 @@ const Cart = ({ cart }) => {
   return (
     <>
       <section className="section-cart">
-        <div className="section-cart-shopping">
-          <div className="container">
-            <div className="section-cart__shopping">
-              <h1 className="title">Shopping cart </h1>
-              <p>(items {totalAmount})</p>
+        <div className="container">
+          <div className="section-cart-shopping">
+            <div className="container_cart">
+              <div className="section-cart__shopping">
+                <h1 className="title">Shopping cart </h1>
+                <p>(items {totalAmount})</p>
+              </div>
+              {cart.map((item) => (
+                <ProductCarts key={item.id} {...item} />
+              ))}
             </div>
-            {cart.map((item) => (
-              <ProductCarts key={item.id} {...item} />
-            ))}
-          </div>
-          <div className="section-cart__item">
-            <div className="section-cart__item__content">
-              <h2>Order summary</h2>
-              <div className="item__content__items">
-                <div className="content__items">
-                  <span className="item">Subtotal</span>
-                  <span className="items">(items {totalAmount})</span>
+            <div className="section-cart__item">
+              <div className="section-cart__item__content">
+                <h2>Order summary</h2>
+                <div className="item__content__items">
+                  <div className="content__items">
+                    <span className="item">Subtotal</span>
+                    <span className="items">(items {totalAmount})</span>
+                  </div>
+                  <div className="total">${totalPrice}</div>
                 </div>
-                <div className="total">${totalPrice}</div>
-              </div>
-              <div className="item__content__total">
-                <div className="content__total">Total</div>
-                <div className="content__totals">${totalPrice}</div>
-              </div>
-              <div className="item__content__btn">
-                <button className="btn" type="button">
-                  <span>Checkout</span>
-                </button>
+                <div className="item__content__total">
+                  <div className="content__total">Total</div>
+                  <div className="content__totals">${totalPrice}</div>
+                </div>
+                <div className="item__content__btn">
+                  <button className="btn" type="button">
+                    <span>Checkout</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

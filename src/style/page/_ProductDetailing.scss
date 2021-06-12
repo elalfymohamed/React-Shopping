@@ -3,137 +3,200 @@ Product Detailing
 ===========*/
 
 .section-product-detailing {
-  width: $small-screen-width;
-  margin: auto;
-  // background-color: #fff;
+    width: $small-screen-width;
+    margin: auto;
 
-  .section-product-detailing__contender {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    margin: 0 auto;
+    // background-color: #fff;
+    @media screen and (max-width: 768px) {
+        width: 95vw;
+    }
 
-    .product-detailing__content {
-      display: flex;
-      align-items: stretch;
-      flex: 1 1 0%;
+    @media screen and (max-width: 635px) {
+        width: 98vw;
+    }
 
-      .product-detailing__content__image {
-        flex: 0 0 20%;
-        margin-right: 30px;
-      }
-      .product-detailing__content__info {
-        flex: 1 1 0%;
-        min-width: 0;
+    .section-product-detailing__contender {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin: 0 auto;
 
-        .section {
-          font-size: 14px;
-          line-height: 15px;
-          font-weight: 500;
-          color: #7e859b;
-          font-style: normal;
-          text-transform: uppercase;
-        }
-        .title {
-          font-size: 1rem;
-          font-style: normal;
-          text-transform: capitalize;
-          margin-top: 25px;
-          font-weight: 600;
-        }
-        .custom_clothing {
-          font-size: 1.2rem;
-          font-style: normal;
-          text-transform: capitalize;
-          margin-top: 15px;
-          line-height: 45px;
-          font-weight: 600;
-        }
-        .ratting {
-          flex-wrap: wrap;
-          display: flex;
-          align-items: center;
-          margin-top: 10px;
-
-          .scoreTog {
-            background: rgb(227, 151, 54);
-            color: rgb(255, 255, 255);
-            font-size: 0.9em;
-            padding: 0.1em 1em;
-            border-radius: 4px;
-          }
-        }
-        .total {
-          margin-top: 70px;
-          display: grid;
-          flex-grow: 1;
-          place-items: center start;
-          grid-template-columns: auto 1fr;
-          gap: 12px 6px;
-
-          .priceWas {
-            color: rgb(126, 133, 155);
-            text-decoration: line-through;
-          }
-          .priceNow {
+        .product-detailing__content {
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            font-size: 20px;
-            font-weight: 500;
-          }
-          .priesSaved {
-            font-weight: 500;
-            font-size: 17px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
+            align-items: stretch;
+            flex: 1 1 0%;
 
-            .profit {
-              background: rgb(223, 241, 217);
-              color: rgb(55, 174, 2);
-              padding: 5px 0.5em;
-              font-size: 12px;
-              margin: 0px 12px;
-              border-radius: 2px;
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
+            .product-detailing__content__image {
+                flex: 0 0 20%;
+                margin-right: 30px;
+
+                @media screen and (max-width: 768px) {
+                    img {
+                        width: 300px;
+                        height: 350px;
+                    }
+                }
+
+                @media screen and (max-width: 635px) {
+                    margin-right: 15px;
+
+                    img {
+                        width: 250px;
+                        height: 300px;
+                    }
+                }
             }
-          }
-        }
-      }
-    }
-    .section-product-detailing__addCart {
-      flex: 3 1 0%;
-      height: auto;
-      display: flex;
-      justify-content: center;
 
-      .section-product-detailing__addCart__btn {
-        margin-top: 50px;
-        .btn {
-          background: rgb(0, 4, 255);
-          border: none;
-          padding: 14px 65px;
-          cursor: pointer;
-          border-radius: $radius;
-          transition: $transition;
-          color: #fff;
+            .product-detailing__content__info {
+                flex: 1 1 0%;
+                min-width: 0;
 
-          span {
-            font-size: 0.9rem;
-            font-weight: 400;
-            text-transform: capitalize;
-            letter-spacing: $spacing;
-            transition: $transition;
-          }
-          &:hover {
-            color: #000;
-            background-color: #feee00;
-          }
+                .section {
+                    font-size: 14px;
+                    line-height: 15px;
+                    font-weight: 500;
+                    color: #7e859b;
+                    font-style: normal;
+                    text-transform: uppercase;
+
+                    @media screen and (max-width: 635px) {
+                        font-size: 12px;
+                    }
+                }
+
+                .title {
+                    font-size: 1rem;
+                    font-style: normal;
+                    text-transform: capitalize;
+                    margin-top: 25px;
+                    font-weight: 600;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.9rem;
+                    }
+
+                    @media screen and (max-width: 635px) {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .custom_clothing {
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    text-transform: capitalize;
+                    margin-top: 15px;
+                    line-height: 45px;
+                    font-weight: 600;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 1rem;
+                        line-height: 35px;
+                    }
+
+                    @media screen and (max-width: 635px) {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .ratting {
+                    flex-wrap: wrap;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+
+                    .scoreTog {
+                        background: rgb(227, 151, 54);
+                        color: rgb(255, 255, 255);
+                        font-size: 0.9em;
+                        padding: 0.1em 1em;
+                        border-radius: 4px;
+                    }
+                }
+
+                .total {
+                    margin-top: 70px;
+                    display: grid;
+                    flex-grow: 1;
+                    place-items: center start;
+                    grid-template-columns: auto 1fr;
+                    gap: 12px 6px;
+
+                    @media screen and (max-width: 768px) {
+                        margin-top: 40px;
+                    }
+
+                    @media screen and (max-width: 635px) {
+                        margin-top: 30px;
+                    }
+
+                    .priceWas {
+                        color: rgb(126, 133, 155);
+                        text-decoration: line-through;
+                    }
+
+                    .priceNow {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    .priesSaved {
+                        font-weight: 500;
+                        font-size: 17px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+
+                        .profit {
+                            background: rgb(223, 241, 217);
+                            color: rgb(55, 174, 2);
+                            padding: 5px 0.5em;
+                            font-size: 12px;
+                            margin: 0px 12px;
+                            border-radius: 2px;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
         }
-      }
+
+        .section-product-detailing__addCart {
+            flex: 3 1 0%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+
+            .section-product-detailing__addCart__btn {
+                margin-top: 50px;
+
+                .btn {
+                    background: rgb(0, 4, 255);
+                    border: none;
+                    padding: 14px 65px;
+                    cursor: pointer;
+                    border-radius: $radius;
+                    transition: $transition;
+                    color: #fff;
+
+                    span {
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        letter-spacing: $spacing;
+                        transition: $transition;
+                    }
+
+                    &:hover {
+                        color: #000;
+                        background-color: #feee00;
+                    }
+                }
+            }
+        }
     }
-  }
 }

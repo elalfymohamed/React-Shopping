@@ -3,12 +3,18 @@ import data from "../../data/data";
 
 const INITIAL_STATE = {
   productsData: data,
-  cart: [],
-  heart: [],
+  cart: localStorage.getItem("cart")
+    ? JSON.parse(localStorage.getItem("cart"))
+    : [],
+  heart: localStorage.getItem("heart")
+    ? JSON.parse(localStorage.getItem("heart"))
+    : [],
   currentItem: null,
 };
-
 const shopReducer = (state = INITIAL_STATE, action) => {
+  localStorage.setItem("cart", JSON.stringify(state.cart));
+  localStorage.setItem("heart", JSON.stringify(state.heart));
+
   switch (action.type) {
     // CART
     case actionTypes.ADD_TO_CART:

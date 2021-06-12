@@ -39,7 +39,7 @@ const mapStateToProps = (state) => {
 };
 
 App.propTypes = {
-  currentItem: PropTypes.array,
+  currentItem: PropTypes.object,
 };
 
 export default connect(mapStateToProps)(App);

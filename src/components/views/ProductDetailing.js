@@ -89,7 +89,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 ProductDetailing.propTypes = {
-  currentItem: PropTypes.array,
+  currentItem: PropTypes.object,
   addToCart: PropTypes.func,
 };
 
